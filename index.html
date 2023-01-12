@@ -4,28 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Commune Page</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="queries.css" />
+    <script defer src="script.js"></script>
+    <title>Commune Page</title>
   </head>
   <body>
     <div class="container-page">
-      <header class="container">
+      <header class="header container">
         <img class="logo-icon" src="Assets/Logo.svg" alt="logo commune" />
-        <div class="main-navbar">
-          <ul class="main-navbar-list">
-            <li><a class="main-nav-link" href="#">Features</a></li>
-            <li><a class="main-nav-link" href="#">Affiliates</a></li>
-            <li><a class="main-nav-link" href="#">Pricing</a></li>
-            <li><a class="main-nav-link" href="#">Communities</a></li>
-            <li><button class="btn">Join Waitlist</button></li>
-          </ul>
-        </div>
+        <ul class="main-navbar-list">
+          <li><a class="main-nav-link" href="#">Features</a></li>
+          <li><a class="main-nav-link" href="#">Affiliates</a></li>
+          <li><a class="main-nav-link" href="#">Pricing</a></li>
+          <li><a class="main-nav-link" href="#">Communities</a></li>
+          <li><button class="btn">Join Waitlist</button></li>
+        </ul>
+        <div class="bx bx-menu" id="menu-icon"></div>
       </header>
       <div class="hero container">
         <div class="hero-text-box">
@@ -61,5 +70,13 @@
         </div>
       </div>
     </div>
+    <!-- <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script> -->
   </body>
 </html>
