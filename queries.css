@@ -12,31 +12,34 @@
   }
   #menu-icon {
     display: block;
-  }
-
-  .btn-mobile-nav {
-    display: block;
     z-index: 9999;
   }
-
   .main-navbar-list {
     background-color: rgba(11, 8, 20, 0.89);
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(10px);
     position: absolute;
-    top: 13%;
-    right: -100%;
-    width: 30%;
-
+    top: 0%;
+    /* right: -100%; */
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
     height: 100vh;
-
     display: flex;
-
     justify-content: center;
     flex-direction: column;
-
     padding: 0rem 0rem;
-    transition: all 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  .main-navbar-list.open {
+    /* right: 0%; */
+    transform: translateX(0);
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
   }
 
   .main-navbar-list li {
@@ -50,7 +53,6 @@
 
   .main-navbar-list .btn {
     font-size: 2.4rem;
-
     width: auto;
   }
   .main-nav-link:link,
@@ -68,10 +70,6 @@
     color: #f6f9fe;
     font-weight: 600;
     border-left: 4px solid #5637b3;
-  }
-
-  .main-navbar-list.open {
-    right: 0%;
   }
 
   .hero-paragraph {
@@ -93,9 +91,6 @@
   input {
     width: 60%;
   }
-  .logos-companies img {
-    height: 4.2rem;
-  }
 }
 
 @media (max-width: 39em) {
@@ -105,5 +100,15 @@
   }
   .btn {
     width: 100%;
+  }
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 31em) {
+  .logos-companies {
+    grid-template-columns: repeat(5, min-content);
+    row-gap: 1.6rem;
   }
 }
